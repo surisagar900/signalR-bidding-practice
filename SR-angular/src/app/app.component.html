@@ -1,0 +1,27 @@
+<h2>Bidding System</h2>
+<div>
+  <p *ngIf="highestBid != null">
+    Current Highest Bid is
+    <strong>
+      {{ highestBid.amount }}
+    </strong>
+    placed by
+    <strong>
+      {{ highestBid.username }}
+    </strong>
+    on
+    <strong>
+      {{ highestBid.lotId }}
+    </strong>
+  </p>
+</div>
+
+<hr />
+
+<div>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <input name="username" ngModel placeholder="username" />
+    <input type="number" name="amount" ngModel placeholder="amount" />
+    <button class="btn btn-primary" type="submit">Bid</button>
+  </form>
+</div>

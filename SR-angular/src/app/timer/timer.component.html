@@ -1,0 +1,11 @@
+<h1>Time Converter</h1>
+<div>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <input type="text" name="utcTime" ngModel placeholder="utc date and time" />
+    <input type="text" name="timeZone" ngModel placeholder="enter timezone" />
+    <button type="submit">
+      convert
+    </button>
+  </form>
+  <div>Show Date : {{ date }}</div>
+</div>
